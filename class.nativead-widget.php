@@ -7,7 +7,7 @@ class NativeAD_Widget extends WP_Widget {
 	private static $dataNad = '';
 	private static $autoTag = '';
 
-	function __construct() {
+	public function __construct() {
 		parent::__construct(
 			'nativead_widget',
 			'NativeAD Widget',
@@ -17,7 +17,13 @@ class NativeAD_Widget extends WP_Widget {
 		self::$autoTag = get_option( 'wp_nativead_auto_tag' );
 	}
 
-	function form( $instance ) {
+	public function widget($args, $instance) {
+		echo $args['before_widget'];
+		echo '<div data-nad-template="' . self::$dataNad . '"></div>';
+		echo $args['after_widget'];
+	}
+
+	public function form( $instance ) {
 		if ( $instance ) {
 			$dataNad = $instance['dataNad'];
 			$autoTag = $instance['autoTag'];
@@ -37,7 +43,7 @@ class NativeAD_Widget extends WP_Widget {
 		<?php */
 	}
 
-	function update($new_instance, $old_instance) {
+	public function update($new_instance, $old_instance) {
 		$instance = $old_instance;
 		// actualizamos las opciones en bbdd
 		update_option( 'wp_nativead_datanad', strip_tags($new_instance['dataNad']) );
