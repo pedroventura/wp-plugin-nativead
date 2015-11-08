@@ -1,9 +1,9 @@
 <?php
 
-class Native {
+class NativeAD {
 
-	private static $autoTag = '';
-	private static $dataNad = '';
+	public static $autoTag = '';
+	public static $dataNad = '';
 
 	public static function init() {
 		self::$dataNad = get_option( 'wp_nativead_datanad' );
@@ -13,9 +13,9 @@ class Native {
 
 	public static function init_native_hooks() {
 		// when activate plugin triggers this hook
-		register_activation_hook( __FILE__, array( 'Native', 'register_data' ) );
+		register_activation_hook( __FILE__, array( 'NativeAD', 'register_data' ) );
 		// hook to load tag in case is required
-		add_action( 'wp_enqueue_scripts', array( 'Native', 'load_tag' ) );
+		add_action( 'wp_enqueue_scripts', array( 'NativeAD', 'load_tag' ) );
 	}
 
 	public static function register_data() {

@@ -1,8 +1,3 @@
-<?php
-$dataNad = get_option( 'wp_nativead_datanad' );
-$autoTag = get_option( 'wp_nativead_auto_tag' );
-?>
-
 <div class="nativead-wrapper-header">
 	<span>&nbsp;</span>
 	<h2>Setup Integración NativeAD</h2>
@@ -28,8 +23,8 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 								<tr>
 									<th><label for="pgcache_prime_interval"> Hash Cliente: </label></th>
 									<td>
-										<span> <i>Este Hash se genera automáticamente o será asignado por el equipo de NativeAD.</i></span>
-										<input class="widefat" id="nativead-datanad" name="nativead-datanad" type="text" value="<?php echo esc_attr( $dataNad ); ?>" />
+										<span> <i>Este Hash se genera automáticamente o bien será asignado por el equipo de NativeAD o por su red de afiliciación con la que trabaja.</i></span>
+										<input class="widefat" id="nativead-datanad" name="nativead-datanad" type="text" value="<?php echo esc_attr( self::$dataNad ); ?>" />
 									</td>
 								</tr>
 								<tr>
@@ -37,7 +32,7 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 									<td>
 										<span> <i>Selecciona esta opción si quieres incluir automaticamente el Tag JavaScript de NativeAD. (* recomendado)</i></span>
 										<br />
-										<input name="nativead-autoTag" type="checkbox" <?php echo $autoTag == 'on' ? 'checked' : ''; ?> >
+										<input name="nativead-autoTag" type="checkbox" <?php echo self::$autoTag == 'on' ? 'checked' : ''; ?> >
 									</td>
 								</tr>
 								<tr>
