@@ -4,8 +4,8 @@
  */
 class NativeAD_Widget extends WP_Widget {
 
-	private static $dataNad = '';
 	private static $autoTag = '';
+	private static $dataNad = '';
 
 	public function __construct() {
 		parent::__construct(
@@ -32,7 +32,14 @@ class NativeAD_Widget extends WP_Widget {
 			$dataNad = self::$dataNad;
 			$autoTag = self::$autoTag;
 		}
-		/* ?>
+		?>
+		<p>
+			The widget creates a new position on your sidebar.<br />
+			This position must be previously established with your ad network or provider. 
+		</p>
+		<?php
+		/* Comment form in the widget area. This process can be configured in the area menu.
+		?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'dataNad' ); ?>"><?php esc_html_e( 'Hash Cliente:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'dataNad' ); ?>" name="<?php echo $this->get_field_name( 'dataNad' ); ?>" type="text" value="<?php echo esc_attr( $dataNad ); ?>" />
