@@ -5,7 +5,7 @@
 class NativeAD_Widget extends WP_Widget {
 
 	private static $dataNad = '';
-	private static $autoTag = 'off';
+	private static $autoTag = '';
 
 	function __construct() {
 		parent::__construct(
@@ -38,17 +38,18 @@ class NativeAD_Widget extends WP_Widget {
 	}
 
 	function update($new_instance, $old_instance) {
-      $instance = $old_instance;
-      // actualizamos las opciones en bbdd
-      update_option( 'wp_nativead_datanad', strip_tags($new_instance['dataNad']) );
-      update_option( 'wp_nativead_auto_tag', strip_tags($new_instance['autoTag']) );
-      // Fields
-      $instance['dataNad'] = strip_tags($new_instance['dataNad']);
-      $instance['autoTag'] = strip_tags($new_instance['autoTag']);
-     return $instance;
- 	}
+		$instance = $old_instance;
+		// actualizamos las opciones en bbdd
+		update_option( 'wp_nativead_datanad', strip_tags($new_instance['dataNad']) );
+		update_option( 'wp_nativead_auto_tag', strip_tags($new_instance['autoTag']) );
+		// Fields
+		$instance['dataNad'] = strip_tags($new_instance['dataNad']);
+		$instance['autoTag'] = strip_tags($new_instance['autoTag']);
+		return $instance;
+	}
 }
 
+// Load Widget
 function nativead_register_widgets() {
 	register_widget( 'NativeAD_Widget' );
 }
