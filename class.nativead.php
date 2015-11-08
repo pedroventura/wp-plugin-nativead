@@ -19,7 +19,7 @@ class Native {
 		// opcion para habilitar el geoip
 		$autoTag = get_option( 'wp_nativead_auto_tag' );
 		if ( empty( $autoTag ) ) {
-			update_option( 'wp_nativead_auto_tag', 'off' );
+			update_option( 'wp_nativead_auto_tag', '' );
 		}
 	}
 
