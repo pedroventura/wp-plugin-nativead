@@ -53,8 +53,8 @@
 								<tr>
 									<th>Página del plugin</th>
 									<td>
-										Para soporte, ayuda técnica o cualquier pregunta enviar un email a: <a href="mailto:support@native.ad">support@native.ad</a>. <br />
-										También puedes ir a la documentación del plugin: <a href=" http://support.native.ad/" target="_blank">http://support.native.ad/</a> desde donde también podrás crear tickets con solicitudes de ayuda.
+										Para soporte, ayuda técnica o cualquier pregunta puede enviar un email a: <a href="mailto:support@native.ad">support@native.ad</a>. <br />
+										También puede ir a la documentación del plugin: <a href=" http://support.native.ad/" target="_blank">http://support.native.ad/</a> desde donde también podrá crear tickets con solicitudes de ayuda.
 									</td>
 								</tr>
 								

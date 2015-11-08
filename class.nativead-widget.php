@@ -34,10 +34,19 @@ class NativeAD_Widget extends WP_Widget {
 		}
 		?>
 		<p>
+			<ul style="list-style: inside none disc;">
+				<li>El widget crea una nueva posición en el sidebar de su blog.</li>
+				<li>Esta posición tiene que haber sido previamente definida con su red de afilicación o con el equipo de NativeAD. </li>
+				<li>No se requiere ninguna acción más por su parte. </li>
+			</ul>
+		</p>
+		<?php
+		/*
+		<p>
 			The widget creates a new position on your sidebar.<br />
 			This position must be previously established with your ad network or provider. 
 		</p>
-		<?php
+		*/
 		/* Comment form in the widget area. This process can be configured in the area menu.
 		?>
 		<p>
