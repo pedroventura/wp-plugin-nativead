@@ -5,7 +5,7 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 
 <div class="nativead-wrapper-header">
 	<span>&nbsp;</span>
-	<h2>Setup NativeAD</h2>
+	<h2>Setup Integración NativeAD</h2>
 </div>
 <?php if ( isset( $_GET['settings-updated'] ) ) { ?>
 <div class="wrap">
@@ -16,7 +16,7 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 <?php } ?>
 
 <div class="wrap">
-	<p>Edita las opciones de integración.</p>
+	<p>Edita las opciones de integración en tu site.</p>
 	<div class="postbox-container">
 		<form name="nativead-form" action="admin.php?page=nativead" method="post">
 			<input type="hidden" name="nativead-form" value="1">
@@ -28,6 +28,7 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 								<tr>
 									<th><label for="pgcache_prime_interval"> Hash Cliente: </label></th>
 									<td>
+										<span> <i>Este Hash se genera automáticamente o será asignado por el equipo de NativeAD.</i></span>
 										<input class="widefat" id="nativead-datanad" name="nativead-datanad" type="text" value="<?php echo esc_attr( $dataNad ); ?>" />
 									</td>
 								</tr>
