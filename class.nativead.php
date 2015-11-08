@@ -3,15 +3,14 @@
 class Native {
 
 	public static function init() {
-		self::init_hooks();
+		self::init_native_hooks();
 	}
 
-	function add_action_links ( $links ) {
-		$mylinks = array('<a href="' . admin_url( 'options-general.php?page=nativead' ) . '">Settings</a>');
-		return array_merge( $links, $mylinks );
+	public static function init_native_hooks() {
+		register_activation_hook( __FILE__, array( 'Native', 'register_data' ) );
 	}
 
-	function register_data() {
+	public static function register_data() {
 		$dataNad = get_option( 'wp_nativead_datanad' );
 		if ( empty( $dataNad) ) {
 			update_option( 'wp_nativead_datanad', md5($_SERVER['HTTP_HOST']) );
@@ -21,13 +20,5 @@ class Native {
 		if ( empty( $autoTag ) ) {
 			update_option( 'wp_nativead_auto_tag', '' );
 		}
-	}
-
-	/**
-	 * Initializes WordPress hooks
-	 */
-	private static function init_hooks() {
-		add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'add_action_links' );
-		register_activation_hook( __FILE__, 'register_data' );
 	}
 }
