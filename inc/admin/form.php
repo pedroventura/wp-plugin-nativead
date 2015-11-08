@@ -13,11 +13,11 @@
 <div class="wrap">
 	<p>Edita las opciones de integración en tu site.</p>
 	<div class="postbox-container">
-		<form name="nativead-form" action="admin.php?page=nativead" method="post">
-			<input type="hidden" name="nativead-form" value="1">
-			<div class="metabox-holder">
-				<div class="postbox" style="width:100%">
-					<div class="inside">
+		<div class="metabox-holder">
+			<div class="postbox" style="width:100%">
+				<div class="inside">
+					<form name="nativead-form" action="admin.php?page=nativead" method="post">
+						<input type="hidden" name="nativead-form" value="1">
 						<table class="form-table">
 							<tbody>
 								<tr>
@@ -43,26 +43,26 @@
 								</tr>
 							</tbody>
 						</table>
-					</div>
-				</div>
-				<div class="postbox">
-					<h3><span>Soporte y Ayuda</span></h3>
-					<div class="inside">
-						<table class="form-table">
-							<tbody>
-								<tr>
-									<th>Página del plugin</th>
-									<td>
-										Para soporte, ayuda técnica o cualquier pregunta puede enviar un email a: <a href="mailto:support@native.ad">support@native.ad</a>. <br />
-										También puede ir a la documentación del plugin: <a href=" http://support.native.ad/" target="_blank">http://support.native.ad/</a> desde donde también podrá crear tickets con solicitudes de ayuda.
-									</td>
-								</tr>
-								
-							</tbody>
-						</table>
-					</div>
+					</form>
 				</div>
 			</div>
-		</from>
+			<div class="postbox">
+				<h3><span>Soporte y Ayuda</span></h3>
+				<div class="inside">
+					<table class="form-table">
+						<tbody>
+							<tr>
+								<th>Página del plugin</th>
+								<td>
+									Para soporte, ayuda técnica o cualquier pregunta puede enviar un email a: <a href="mailto:support@native.ad">support@native.ad</a>. <br />
+									También puede ir a la documentación del plugin: <a href=" http://support.native.ad/" target="_blank">http://support.native.ad/</a> desde donde también podrá crear tickets con solicitudes de ayuda.
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
