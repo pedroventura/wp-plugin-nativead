@@ -1,0 +1,14 @@
+/* admin styles */
+
+.nativead-wrapper-header {
+	margin-top: 20px
+}
+.nativead-wrapper-header h2 {
+	margin-left: 25px;
+}
+.nativead-wrapper-header span {
+	background: url("../icons/nativelogo.png") no-repeat;
+	width: 18px;
+	float: left;
+	display: inline;
+}

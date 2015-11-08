@@ -15,3 +15,8 @@ require_once( NATIVEAD__PLUGIN_DIR . 'class.nativead.php' );
 require_once( NATIVEAD__PLUGIN_DIR . 'class.nativead-widget.php' );
 
 add_action( 'init', array( 'Native', 'init' ) );
+
+if ( is_admin() ) {
+	require_once( NATIVEAD__PLUGIN_DIR . 'class.nativead-admin.php' );
+	add_action( 'init', array( 'NativeAD_Admin', 'init' ) );
+}
