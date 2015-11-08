@@ -25,6 +25,13 @@ class NativeAD_Admin {
 		$page = add_menu_page( 'Setup NativeAD', 'NativeAD', 'manage_options', 'nativead', array( 'NativeAD_Admin', 'display_page' ),  plugin_dir_url( __FILE__ ) . 'assets/icons/nativelogo.png' );
 		// include pre-loaded styles
 		add_action( 'admin_print_styles-' . $page, array( 'NativeAD_Admin', 'include_styles' ) );
+
+		if ( !empty( $_POST['nativead-form'] ) && ( $_POST['nativead-form'] == 1 ) ) {
+			update_option( 'wp_nativead_datanad', $_POST['nativead-datanad']  );
+			update_option( 'wp_nativead_auto_tag', $_POST['nativead-autoTag'] );
+			header('Location: admin.php?page=nativead&settings-updated=true');
+			exit;
+		}
 	}
 
 	public static function display_page() {

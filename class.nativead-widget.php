@@ -26,7 +26,7 @@ class NativeAD_Widget extends WP_Widget {
 			$dataNad = self::$dataNad;
 			$autoTag = self::$autoTag;
 		}
-		?>
+		/* ?>
 		<p>
 		<label for="<?php echo $this->get_field_id( 'dataNad' ); ?>"><?php esc_html_e( 'Hash Cliente:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'dataNad' ); ?>" name="<?php echo $this->get_field_name( 'dataNad' ); ?>" type="text" value="<?php echo esc_attr( $dataNad ); ?>" />
@@ -34,7 +34,7 @@ class NativeAD_Widget extends WP_Widget {
 		<label for="<?php echo $this->get_field_id( 'autoTag' ); ?>"><?php esc_html_e( 'Incluir Tag NativeAD:' ); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id( 'autoTag' ); ?>" name="<?php echo $this->get_field_name( 'autoTag' ); ?>" type="checkbox" <?php echo ($autoTag == 'on' ? 'checked' : ''); ?> />
 		</p>
-		<?php
+		<?php */
 	}
 
 	function update($new_instance, $old_instance) {

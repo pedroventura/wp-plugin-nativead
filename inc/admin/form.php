@@ -16,10 +16,10 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 <?php } ?>
 
 <div class="wrap">
-	<p>Configura el mensaje que aparece a tus usuarios.</p>
+	<p>Edita las opciones de integración.</p>
 	<div class="postbox-container">
-		<form name="cookie-form" action="admin.php?page=cookie_ley_espana" method="post">
-			<input type="hidden" name="cookie-form" value="1">
+		<form name="nativead-form" action="admin.php?page=nativead" method="post">
+			<input type="hidden" name="nativead-form" value="1">
 			<div class="metabox-holder">
 				<div class="postbox" style="width:100%">
 					<div class="inside">
@@ -36,7 +36,7 @@ $autoTag = get_option( 'wp_nativead_auto_tag' );
 									<td>
 										<span> <i>Selecciona esta opción si quieres incluir automaticamente el Tag JavaScript de NativeAD. (* recomendado)</i></span>
 										<br />
-										<input name="autoTag" type="checkbox" <?php echo $autoTag == 'on' ? 'checked' : ''; ?> >
+										<input name="nativead-autoTag" type="checkbox" <?php echo $autoTag == 'on' ? 'checked' : ''; ?> >
 									</td>
 								</tr>
 								<tr>

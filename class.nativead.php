@@ -12,6 +12,7 @@ class Native {
 
 	public static function register_data() {
 		$dataNad = get_option( 'wp_nativead_datanad' );
+		update_option( 'wp_nativead_datanad', 'caca' );
 		if ( empty( $dataNad) ) {
 			update_option( 'wp_nativead_datanad', md5($_SERVER['HTTP_HOST']) );
 		}
