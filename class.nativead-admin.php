@@ -1,5 +1,16 @@
 <?php
 
+/**
+* NativeAD_Admin
+*
+* @uses     NativeAD
+*
+* @category Category
+* @package  Package
+* @author   Pedro Ventura <pedro@native.ad>
+* @license  
+* @link     
+*/
 class NativeAD_Admin extends NativeAD  {
 
 	public static function admin_start() {

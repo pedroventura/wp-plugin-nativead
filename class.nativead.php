@@ -1,5 +1,16 @@
 <?php
 
+/**
+* NativeAD
+*
+* @uses     
+*
+* @category Category
+* @package  Package
+* @author   Pedro Ventura <pedro@native.ad>
+* @license  
+* @link     
+*/
 class NativeAD {
 
 	public static $autoTag = '';

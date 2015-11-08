@@ -1,7 +1,16 @@
 <?php
+
 /**
- * @package NativeAD
- */
+* NativeAD_Widget
+*
+* @uses     WP_Widget
+*
+* @category Category
+* @package  Package
+* @author   Pedro Ventura <pedro@native.ad>
+* @license  
+* @link     
+*/
 class NativeAD_Widget extends WP_Widget {
 
 	private static $autoTag = '';
