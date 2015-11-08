@@ -2,24 +2,35 @@
 
 class Native {
 
+	private static $autoTag = '';
+	private static $dataNad = '';
+
 	public static function init() {
+		self::$dataNad = get_option( 'wp_nativead_datanad' );
+		self::$autoTag = get_option( 'wp_nativead_auto_tag' );
 		self::init_native_hooks();
 	}
 
 	public static function init_native_hooks() {
+		// when activate plugin triggers this hook
 		register_activation_hook( __FILE__, array( 'Native', 'register_data' ) );
+		// hook to load tag in case is required
+		add_action( 'wp_enqueue_scripts', array( 'Native', 'load_tag' ) );
 	}
 
 	public static function register_data() {
-		$dataNad = get_option( 'wp_nativead_datanad' );
-		update_option( 'wp_nativead_datanad', 'caca' );
-		if ( empty( $dataNad) ) {
+		if ( empty( self::$dataNad) ) {
 			update_option( 'wp_nativead_datanad', md5($_SERVER['HTTP_HOST']) );
 		}
-		// opcion para habilitar el geoip
-		$autoTag = get_option( 'wp_nativead_auto_tag' );
-		if ( empty( $autoTag ) ) {
+		
+		if ( empty( self::$autoTag ) ) {
 			update_option( 'wp_nativead_auto_tag', '' );
+		}
+	}
+
+	public static function load_tag() {
+		if (self::$autoTag == 'on') {
+			wp_enqueue_script( 'nativead-tag', 'https://files.native.ad/tag.min.js' );
 		}
 	}
 }
