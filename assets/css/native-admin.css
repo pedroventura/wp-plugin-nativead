@@ -7,8 +7,9 @@
 	margin-left: 25px;
 }
 .nativead-wrapper-header span {
-	background: url("../icons/nativelogo.png") no-repeat;
-	width: 18px;
+	background: url("../icons/20x20.png") no-repeat;
+	width: 20px;
+	height: 20px;
 	float: left;
 	display: inline;
 }

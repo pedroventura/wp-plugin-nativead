@@ -32,7 +32,7 @@ class NativeAD_Admin extends NativeAD  {
 
 	public static function admin_native_menu() {
 		// include menu on dashboard
-		$page = add_menu_page( 'Setup NativeAD', 'NativeAD', 'manage_options', 'nativead', array( 'NativeAD_Admin', 'admin_native_form' ),  plugin_dir_url( __FILE__ ) . 'assets/icons/nativelogo.png' );
+		$page = add_menu_page( 'Setup NativeAD', 'NativeAD', 'manage_options', 'nativead', array( 'NativeAD_Admin', 'admin_native_form' ),  plugin_dir_url( __FILE__ ) . 'assets/icons/20x20.png' );
 		// include pre-loaded styles
 		add_action( 'admin_print_styles-' . $page, array( 'NativeAD_Admin', 'admin_native_styles' ) );
 
